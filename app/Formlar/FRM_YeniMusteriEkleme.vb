@@ -41,7 +41,7 @@ Public Class FRM_YeniMusteriEkleme
     End Sub
 
     Private Sub BTN_YeniMusteriEkleVazgec_Click(sender As Object, e As EventArgs) Handles BTN_YeniMusteriEkleOnay.Click
-        FRM_MusteriIslemleri.Visible = True
+        'FRM_MusteriIslemleri.Visible = True
         Me.Visible = False
     End Sub
 
@@ -60,7 +60,7 @@ Public Class FRM_YeniMusteriEkleme
             Dim commandInsert As New OleDbCommand(sql, connection)
             commandInsert.ExecuteNonQuery()
             MessageBox.Show("Yeni Müşteri Eklendi, [Müşteriler] Formuna dönülüyor.")
-            FRM_MusteriIslemleri.Visible = True
+            'FRM_MusteriIslemleri.Visible = True
             Me.Visible = False
         Catch ex As Exception
             MessageBox.Show("Hata oluştu: " & ex.Message)

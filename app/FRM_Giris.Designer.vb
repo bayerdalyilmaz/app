@@ -37,6 +37,7 @@ Partial Class FRM_Giris
         BTN_MusteriIslemleri.TabIndex = 3
         BTN_MusteriIslemleri.Text = "Müşteri İşlemleri"
         BTN_MusteriIslemleri.UseVisualStyleBackColor = True
+        BTN_MusteriIslemleri.Visible = False
         ' 
         ' BTN_ExceleBaglan
         ' 

@@ -3,6 +3,7 @@ Imports System.Data.OleDb
 Imports System.Data.SqlClient
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Public Class FRM_MusteriIslemleri
+    Public connectionString As String
     Dim FRM_Giris As FRM_Giris
     'Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\00_CalismaAlani\VB\app\app\app\Kaynaklar\kaynaklar.xlsx;Extended Properties=""Excel 12.0 Xml;HDR=YES;"""
 
@@ -12,7 +13,7 @@ Public Class FRM_MusteriIslemleri
     End Sub
     Private Sub FRM_MusteriIslemleri_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim excelDosyaAdresi As String = FRM_Giris.TXT_ExcelDosyaAdresi.Text
-        Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & excelDosyaAdresi & ";Extended Properties=""Excel 12.0 Xml;HDR=YES;"""
+        connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & excelDosyaAdresi & ";Extended Properties=""Excel 12.0 Xml;HDR=YES;"""
 
         Dim connection As New OleDbConnection(connectionString)
         Dim sql As String

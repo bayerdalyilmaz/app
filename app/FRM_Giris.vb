@@ -4,7 +4,7 @@ Imports System.Data.SqlClient
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Public Class FRM_Giris
     Private Sub BTN_MusteriIslemleri_Click(sender As Object, e As EventArgs) Handles BTN_MusteriIslemleri.Click
-        FRM_MusteriIslemleri.Visible = True
+        'FRM_MusteriIslemleri.Visible = True
         Me.Visible = False
     End Sub
 
@@ -20,6 +20,7 @@ Public Class FRM_Giris
             Dim musterilerDataAdapter As New OleDbDataAdapter(sql, connection)
             musterilerDataAdapter.Fill(musterilerDataSet)
             DGV_Musteriler.DataSource = musterilerDataSet.Tables(0).DefaultView()
+            MessageBox.Show("Bağlantı başarılı!")
         Catch ex As Exception
             MessageBox.Show("Hata oluştu: " & ex.Message)
         Finally
